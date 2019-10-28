@@ -1,0 +1,37 @@
+<view class = "item" wx:for="{{list}}"  bindtap="toCleanOrder" data-index="{{item.index}}" data-id="{{item.id}}" data-name="{{item.name}}" data-tel="{{item.tel}}" data-area="{{item.area}}"data-addre="{{item.addre}}" data-image="{{item.image}}" data-areavalue="{{item.areavalue}}" data-addrevalue="{{item.addrevalue}}" data-door="{{item.door}}">
+  <image src ="{{item.image}}"  mode = "widthFix"/>
+<view class = "info">
+<text>{{item.name}}，{{item.tel}}，　{{item.area}}㎡</text>
+<text  >地址：{{item.addre}}</text>
+
+   姓名： <text>{{accountAdd.Name}}</text>
+    职位：<text>{{accountAdd.Title}}</text>
+    电话：<text>{{accountAdd.TelPhone}}</text>
+    手机：<text>{{accountAdd.MobilePhone}}</text>
+    接收群发：<text>{{isGetGroupSend}}</text>
+    登录邮箱：<text>{{accountAdd.Email}}</text>
+   QQ：<text>{{accountAdd.QQ}}</text>
+
+ 姓名：<text>{{item.name}} </text>
+    职位：<text>{{item.title}}</text>
+    电话：<text>{{item.telPhone}}</text>
+    手机：<text>{{item.mobilePhone}}</text>
+    接收群发：<text>{{getGroupSend}}</text>
+    登录邮箱：<text>{{item.email}}</text>
+    QQ：<text>{{item.QQ}}</text>
+</view>
+
+<view class = "modify" bindtap="toModifyAddre" data-index="{{item.index}}" data-id="{{item.id}}" data-name="{{item.name}}" data-tel="{{item.tel}}" data-area="{{item.area}}"data-addre="{{item.addre}}" data-image="{{item.image}}"    data-areavalue="{{item.areavalue}}" data-addrevalue="{{item.addrevalue}}" data-door="{{item.door}}">
+<image src = "../../images/modify.png"
+    mode = "widthFix" bindtap = "detete"/>
+</view>
+</view>
+
+
+
+<view class = "add" bindtap = "addAddre">
+	<image  class = "left"src = "../../images/6.png"
+    mode = "widthFix" /><view class = "text">新增个人地址</view>
+    <image class="right" src = "../../images/right.png"
+    mode = "widthFix" />
+</view>
